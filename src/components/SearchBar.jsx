@@ -3,9 +3,9 @@ function SearchBar() {
     <div>
         <div>
             <label>SearchBar: </label>
-            <input type="text" placeholder="search here" />
+            <input type="text" placeholder="search here" id="searchBar"/>
         </div>
-        <button>search</button>
+        <button className="search-button">search</button>
     </div>
   );
 }

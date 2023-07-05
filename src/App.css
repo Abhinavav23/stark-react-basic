@@ -5,7 +5,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
+#searchBar{
+  padding: 0.5rem 1rem;
+}
+
+.search-button{
+  background-color: aqua;
+  color: #282c34;
+  padding: 0.25rem 0.5rem;
+  border: none;
+}
