@@ -1,3 +1,5 @@
 export const Logo = () => {
-  return <div>Stark</div>;
+  return (
+  <span className="logo">S</span>
+  );
 };

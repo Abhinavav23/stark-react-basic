@@ -1,5 +1,4 @@
 .App {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -17,4 +16,26 @@
   color: #282c34;
   padding: 0.25rem 0.5rem;
   border: none;
+}
+  
+.logo{
+  font-size: 22px;
+  background-color: blueviolet;
+  height: 20px;
+  width: 20px;
+  padding: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.header-container{
+  /* display: flex; */
+  justify-content: space-between;
+}
+
+.dark{
+  background-color: #282c34;
+}
+
+.warning{
+  background-color: orange;
 }
