@@ -1,0 +1,14 @@
+.Product-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-container{
+    /* height: 100px; */
+    width: 120px;
+    padding: 16px;
+    background-color: #ddd;
+    margin: 15px 0;
+}
