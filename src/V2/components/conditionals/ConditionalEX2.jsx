@@ -23,11 +23,37 @@ export const ConditionalEX2 = () => {
     );
   }
 
+  let value = 2;
+  let valueEl;
+
+  //   if(value === 1){
+  //     valueEl = <div>1</div>
+  //   }else if(value === 2){
+  //     valueEl = <div>2</div>
+  //   } else if (value===3){
+  //     valueEl = <div>2</div>
+  //   }
+
+  switch (value) {
+    case 1:
+      valueEl = <div>1</div>;
+      break
+    case 2:
+      valueEl = <div>2</div>;
+      break;
+    case 3:
+      valueEl = <div>3</div>;
+      break;
+  }
+
   return (
-    <form action="">
-      <label htmlFor="username">username</label>
-      <input type="text" id="username" />
-      {loginContent}
-    </form>
+    <>
+      <form action="">
+        <label htmlFor="username">username</label>
+        <input type="text" id="username" />
+        {loginContent}
+      </form>
+      <div>Value: {valueEl}</div>
+    </>
   );
 };
