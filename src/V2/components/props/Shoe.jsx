@@ -1,3 +1,5 @@
+import { Seller } from "./Seller";
+
 export function Shoe({
   brand,
   productName,
@@ -18,7 +20,7 @@ export function Shoe({
   //     seller: { name, rating },
   //   } = props;
   return (
-    <section>
+    <section style={{border: '1px solid gray', padding: '10px', margin: '10px 40px'}}>
       <div>Brand: {brand}</div>
       <div>Product Name: {productName}</div>
       <div>InStock: {inStock ? "Available" : "Out of stock"}</div>
@@ -29,8 +31,7 @@ export function Shoe({
           return <span key={i}>{size} </span>;
         })}
       </div>
-      <div>Seller: {name}</div>
-      <div>Seller rating: {rating}</div>
+      <Seller name={name} rating={rating}/>
     </section>
   );
 }
