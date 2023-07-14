@@ -1,6 +1,8 @@
 import { Header } from "./components/composition/Header";
 import "./AppV2.css";
-import { Footer } from "./components/composition/Footer";
+import { Footer } from "./components/helpAndFeedback/Footer";
+import { Feedback } from "./components/helpAndFeedback/Feedback";
+import { Name } from "./components/states/Name";
 export const AppV2 = () => {
   return (
     <main>
@@ -12,11 +14,10 @@ export const AppV2 = () => {
         </div>
       </Header>
 
-      <Header  device={"mobile"} logoDesign={"circular"}/>
-      <Footer/>
+      {/* <Header  device={"mobile"} logoDesign={"circular"}/> */}
+      {/* <Footer/> */}
+      {/* <Feedback/> */}
       <br />
-
-
       {/* <Header theme={"dark"}  >
         <ul>
           <li>
@@ -30,6 +31,8 @@ export const AppV2 = () => {
           </li>
         </ul>
       </Header> */}
+
+      <Name/>
     </main>
   );
 };
