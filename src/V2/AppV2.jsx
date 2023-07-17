@@ -3,6 +3,7 @@ import "./AppV2.css";
 import { Footer } from "./components/helpAndFeedback/Footer";
 import { Feedback } from "./components/helpAndFeedback/Feedback";
 import { Name } from "./components/states/Name";
+import { UserInfo } from "./components/states/UserInfo";
 export const AppV2 = () => {
   return (
     <main>
@@ -32,7 +33,8 @@ export const AppV2 = () => {
         </ul>
       </Header> */}
 
-      <Name/>
+      {/* <Name/> */}
+      <UserInfo/>
     </main>
   );
 };
