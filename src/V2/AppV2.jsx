@@ -4,6 +4,10 @@ import { Footer } from "./components/helpAndFeedback/Footer";
 import { Feedback } from "./components/helpAndFeedback/Feedback";
 import { Name } from "./components/states/Name";
 import { UserInfo } from "./components/states/UserInfo";
+import { Counter } from "./components/states/Counter";
+import { PrevState } from "./components/states/PrevState";
+import { AsyncStateEx } from "./components/states/AsyncStateEx";
+import { LoginForm } from "./components/form/LoginForm";
 export const AppV2 = () => {
   return (
     <main>
@@ -34,7 +38,14 @@ export const AppV2 = () => {
       </Header> */}
 
       {/* <Name/> */}
-      <UserInfo/>
+      {/* <UserInfo/> */}
+      {/* <Counter/> */}
+      {/* <PrevState/> */}
+      {/* <AsyncStateEx/> */}
+
+      {/* forms */}
+
+      <LoginForm/>
     </main>
   );
 };
