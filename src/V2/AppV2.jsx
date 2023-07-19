@@ -8,6 +8,8 @@ import { Counter } from "./components/states/Counter";
 import { PrevState } from "./components/states/PrevState";
 import { AsyncStateEx } from "./components/states/AsyncStateEx";
 import { LoginForm } from "./components/form/LoginForm";
+import { SignUp } from "./components/form/SignUp";
+import { GetUSerInfo } from "./components/form/GetUserInfo";
 export const AppV2 = () => {
   return (
     <main>
@@ -45,7 +47,10 @@ export const AppV2 = () => {
 
       {/* forms */}
 
-      <LoginForm/>
+      {/* <LoginForm/> */}
+      {/* <SignUp/> */}
+      
+      <GetUSerInfo/>
     </main>
   );
 };
