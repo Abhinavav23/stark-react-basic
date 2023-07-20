@@ -10,6 +10,7 @@ import { AsyncStateEx } from "./components/states/AsyncStateEx";
 import { LoginForm } from "./components/form/LoginForm";
 import { SignUp } from "./components/form/SignUp";
 import { GetUSerInfo } from "./components/form/GetUserInfo";
+import { FormValidation } from "./components/form/FormValidation";
 export const AppV2 = () => {
   return (
     <main>
@@ -49,8 +50,8 @@ export const AppV2 = () => {
 
       {/* <LoginForm/> */}
       {/* <SignUp/> */}
-      
-      <GetUSerInfo/>
+      {/* <GetUSerInfo/> */}
+      <FormValidation/>
     </main>
   );
 };
