@@ -11,6 +11,7 @@ import { LoginForm } from "./components/form/LoginForm";
 import { SignUp } from "./components/form/SignUp";
 import { GetUSerInfo } from "./components/form/GetUserInfo";
 import { FormValidation } from "./components/form/FormValidation";
+import { FormValidationV2 } from "./components/form/FormValidationV2";
 export const AppV2 = () => {
   return (
     <main>
@@ -51,7 +52,8 @@ export const AppV2 = () => {
       {/* <LoginForm/> */}
       {/* <SignUp/> */}
       {/* <GetUSerInfo/> */}
-      <FormValidation/>
+      {/* <FormValidation/> */}
+      <FormValidationV2/>
     </main>
   );
 };

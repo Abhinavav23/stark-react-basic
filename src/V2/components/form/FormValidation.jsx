@@ -5,10 +5,13 @@ export const FormValidation = () => {
     firstName: "",
     lastName: "",
     email: "",
+    batch:'',
     remember: false,
   };
   const [userInfo, setUserInfo] = useState(initialState);
-  const [isError, setIsError] = useState(false);
+  // const [isError, setIsError] = useState(false);
+  const [error, setError] = useState([]);
+  const [isSubmitted , setIsSubmitted] = useState(false);
 
   const saveInfo = (ev) => {
     const { name, value } = ev.target;
@@ -25,9 +28,20 @@ export const FormValidation = () => {
 
     const result = Object.values(userInfo);
     const shouldShowError = result.includes("");
-    
-    setIsError(shouldShowError);
-    setUserInfo(initialState);
+  
+    // const errors =  Object.entries(userInfo);
+
+    let errorArr = []
+    for(let key in userInfo){
+      // checking which all fields for which we need to display error
+      if(userInfo[key] === ''){
+        errorArr.push(key)
+      }
+    }
+    console.log('error', errorArr);
+    setError(errorArr);
+
+    setIsSubmitted(true);
 
     // scenario 1
     // write the fields name which has to be filled
@@ -36,6 +50,7 @@ export const FormValidation = () => {
     // firstname --> 3
     // lastname --> 3
     // email --> 7
+    // batch --> 2
 
   };
 
@@ -69,6 +84,16 @@ export const FormValidation = () => {
           onChange={saveInfo}
         />
         <br /> <br />
+
+        <label htmlFor="batch">Batch: </label>
+        <input
+          type="text"
+          name="batch"
+          id="batch"
+          value={userInfo.batch}
+          onChange={saveInfo}
+        />
+        <br /> <br />
         <input
           type="checkbox"
           name="remember"
@@ -84,9 +109,22 @@ export const FormValidation = () => {
         {/*  */}
         <input type="submit" value="signUp" />
       </form>
-      {isError && (
+      {/* {isError && (
         <h3 style={{ color: "red" }}>Please fill all the fields correctly</h3>
-      )}
+      )} */}
+
+      {/* {
+        error.map((err, i) => {
+          return <div key={i} style={{color: 'red'}}>{err} cant be empty</div>
+        })
+      } */}
+
+      {
+        error.length > 0 ?  error.map((err, i) => {
+          return <div key={i} style={{color: 'red'}}>{err} cant be empty</div>
+        }) :  isSubmitted &&( <div style={{color: 'green'}}>Success</div>)
+      }
+
     </>
   );
 };
