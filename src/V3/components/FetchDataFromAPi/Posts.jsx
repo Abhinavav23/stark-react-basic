@@ -6,24 +6,33 @@ export const Posts = () => {
 
   //   let posts = []
   let [posts, setPosts] = useState([]);
+//   const [page, setPage] = useState(1);
+
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
+    fetch(`https://jsonplaceholder.typicode.com/posts`)
       .then((res) => {
-        console.log("res", res);
+        // console.log("res", res);
         return res.json();
       })
       .then((data) => {
         setPosts(data);
-        console.log("posts", posts);
+        // console.log("posts", posts);
       })
       .catch((err) => {
         console.log(err);
       });
   }, []);
 
-
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+        console.log('scrolling');
+        if(document.documentElement.scrollTop > document.documentElement.scrollHeight*0.9){
+           console.log('reached bottom'); 
+        //    setPage((prev) => prev+1)
+        }
+    })
+  }, [])
   
-
     // input data
     // step 1 --> create an input
     // step 2 --> onChange handler and save the data in state
