@@ -3,6 +3,8 @@ import { SideEffectExOne } from "./components/sideEffects/SideEffectExOne";
 import { AsyncEffect } from "./components/sideEffects/AsyncEffect";
 import { Posts } from "./components/FetchDataFromAPi/Posts";
 import { Albums } from "./components/FetchDataFromAPi/Albums";
+import { CommentsWithLoader } from "./components/FetchDataFromAPi/CommentsWithLoader";
+import { ClassCompExOne } from "./components/ClassBasedComp/ClassCompExOne";
 
 export const App = () => {
   const [show, setShow] = useState(true);
@@ -14,7 +16,9 @@ export const App = () => {
       {/* <button onClick={() => setShow(!show)}>{show ? "Hide" : "Show"}</button> */}
 
       {/* <Posts/> */}
-      <Albums/>
+      {/* <Albums/> */}
+      {/* <CommentsWithLoader/> */}
+      <ClassCompExOne username={"Abhinav"} batch={"Stark"}/>
     </div>
   );
 };
