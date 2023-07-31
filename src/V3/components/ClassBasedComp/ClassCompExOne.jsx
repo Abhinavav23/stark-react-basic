@@ -2,12 +2,16 @@ import { Component } from "react";
 
 export class ClassCompExOne extends Component{
     constructor(props){
+        // calling Component class constructor
         super(props);
+        // creating and initialize a state in class comp
         this.state = {
             classTime: '2hrs',
             classDays: ['Mon', 'Tues', 'Wed']
         }
     }
+
+    
 
     updateTime = () => {
         console.log('updating time'); //sync
@@ -18,7 +22,7 @@ export class ClassCompExOne extends Component{
         this.setState({...this.state, classTime: '4hrs'}, () => {
             console.log('from callback', this.state);
         }); //async
-        
+
         console.log('after', this.state); //sync
     }
     
