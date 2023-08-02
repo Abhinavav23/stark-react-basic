@@ -10,6 +10,7 @@ import LifecycleExTwo from "./components/ClassBasedComp/Lifecycle/LifecycleExTwo
 
 export const App = () => {
   const [show, setShow] = useState(true);
+  console.log('app')
   return (
     <div>
       <h3>App</h3>
