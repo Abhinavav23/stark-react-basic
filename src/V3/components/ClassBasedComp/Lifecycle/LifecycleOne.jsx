@@ -12,7 +12,8 @@ export default class LifecycleOne extends Component {
 
   componentDidMount() {
     // for side effects
-    //
+    // runs only once in lifecycle of comp
+    // useEffect with [] dependency
     console.log("running component did mount");
   }
 
@@ -35,6 +36,12 @@ export default class LifecycleOne extends Component {
         ...this.state,
         name: "updated Name"
     })
+  }
+
+  componentWillUnmount(){
+    // cleanup activities
+    // useEffect with a function returned with empty dep
+    console.log('unmounting the comp');
   }
 
   render() {

@@ -6,6 +6,7 @@ import { Albums } from "./components/FetchDataFromAPi/Albums";
 import { CommentsWithLoader } from "./components/FetchDataFromAPi/CommentsWithLoader";
 import { ClassCompExOne } from "./components/ClassBasedComp/ClassCompExOne";
 import LifecycleOne from "./components/ClassBasedComp/Lifecycle/LifecycleOne";
+import LifecycleExTwo from "./components/ClassBasedComp/Lifecycle/LifecycleExTwo";
 
 export const App = () => {
   const [show, setShow] = useState(true);
@@ -20,7 +21,8 @@ export const App = () => {
       {/* <Albums/> */}
       {/* <CommentsWithLoader/> */}
       {/* <ClassCompExOne username={"Abhinav"} batch={"Stark"}/> */}
-      <LifecycleOne/>
+      {/* <LifecycleOne/> */}
+      <LifecycleExTwo/>
     </div>
   );
 };

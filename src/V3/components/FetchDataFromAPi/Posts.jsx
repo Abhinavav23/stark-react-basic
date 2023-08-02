@@ -6,7 +6,7 @@ export const Posts = () => {
 
   //   let posts = []
   let [posts, setPosts] = useState([]);
-//   const [page, setPage] = useState(1);
+  //   const [page, setPage] = useState(1);
 
   useEffect(() => {
     fetch(`https://jsonplaceholder.typicode.com/posts`)
@@ -23,35 +23,36 @@ export const Posts = () => {
       });
   }, []);
 
+  const handleScroll = () => {
+    console.log("scrolling");
+    if (
+      document.documentElement.scrollTop >
+      document.documentElement.scrollHeight * 0.9
+    ) {
+      console.log("reached bottom");
+      // setPage((prev) => prev + 1);
+    }
+  };
+
   useEffect(() => {
-    window.addEventListener('scroll', () => {
-        console.log('scrolling');
-        if(document.documentElement.scrollTop > document.documentElement.scrollHeight*0.9){
-           console.log('reached bottom'); 
-        //    setPage((prev) => prev+1)
-        }
-    })
-  }, [])
-  
-    // input data
-    // step 1 --> create an input
-    // step 2 --> onChange handler and save the data in state
+    window.addEventListener("scroll", handleScroll);
+  }, []);
 
+  // input data
+  // step 1 --> create an input
+  // step 2 --> onChange handler and save the data in state
 
-    // fetch call to get result based on input
-    // 
-    // useEffect(() => {
-    //     // fetch('https://apitogetdata')
-        
-    // }, [inputVal])
+  // fetch call to get result based on input
+  //
+  // useEffect(() => {
+  //     // fetch('https://apitogetdata')
 
+  // }, [inputVal])
 
-
-    // useEffect(() => {
-    //     setValue()
-        // infinite loop
-    // })
-
+  // useEffect(() => {
+  //     setValue()
+  // infinite loop
+  // })
 
   return (
     <main>
