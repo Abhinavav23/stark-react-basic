@@ -3,6 +3,9 @@ import { Colors } from './Colors'
 import { Price } from './Price'
 
 export const Product = ({colors, price, title}) => {
+  // const sendPrice = (price) => {
+  //   console.log('price', price);
+  // }
   return (
     <section style={{display: 'flex', flexDirection:'column'}}>
       <h3 >{title}</h3>
