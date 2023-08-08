@@ -2,6 +2,7 @@ import React from 'react'
 import { Product } from './Product'
 
 export const ProductList = () => {
+  console.log('rendering ProductList');
   return (
     <section style={{display: 'flex', flexDirection:'column'}}>
         <div>ProductList</div>
