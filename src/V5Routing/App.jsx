@@ -6,6 +6,8 @@ import { Profile } from "./components/Pages/Profile";
 import { Route, Routes } from "react-router-dom";
 import { PageNotFound } from "./components/PageNotFound";
 import { Navbar } from "./components/Navbar";
+import './App.css';
+import { DynamicProfile } from "./components/Pages/DynamicProfile";
 
 export const App = () => {
   const [page, setPage] = useState("home");
@@ -31,6 +33,7 @@ export const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/myProfile" element={<Profile />} />
+        <Route path="/myProfile/:userId/myuser/:pincode/" element={<DynamicProfile />} />
         {/* default route */}
         <Route path="*" element={<PageNotFound />} />
       </Routes>
