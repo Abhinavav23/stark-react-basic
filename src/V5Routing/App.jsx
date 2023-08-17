@@ -3,14 +3,15 @@ import { Home } from "./components/Pages/Home";
 import { About } from "./components/Pages/About";
 import { Contact } from "./components/Pages/Contact";
 import { Profile } from "./components/Pages/Profile";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { PageNotFound } from "./components/PageNotFound";
 import { Navbar } from "./components/Navbar";
-import './App.css';
+import "./App.css";
 import { DynamicProfile } from "./components/Pages/DynamicProfile";
+import { Login } from "./components/Pages/Login";
 
 export const App = () => {
-  const [page, setPage] = useState("home");
+  const [loggedIn, setLoggedIn] = useState(false);
   return (
     // <main>
     //   <h2>Stark App</h2>
@@ -26,14 +27,23 @@ export const App = () => {
     // </main>
     <main>
       <h3>Stark App</h3>
-      <Navbar/>
+      <button onClick={() => setLoggedIn(!loggedIn)}>
+        {loggedIn ? "Logout" : "Login"}
+      </button>
+
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Navigate to={loggedIn ? "/home": '/login'} />} />
+        <Route path="/home" element={loggedIn ? <Home/> : <Navigate to="/login"/>} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/myProfile" element={<Profile />} />
-        <Route path="/myProfile/:userId/myuser/:pincode/" element={<DynamicProfile />} />
+        <Route
+          path="/myProfile/:userId/myuser/:pincode/"
+          element={<DynamicProfile />}
+        />
+        <Route path="/login" element={<Login />} />
+
         {/* default route */}
         <Route path="*" element={<PageNotFound />} />
       </Routes>
