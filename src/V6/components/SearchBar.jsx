@@ -2,12 +2,12 @@ import React, { forwardRef, useEffect, useRef, useState } from "react";
 
 // forwardRef to access the ref in childComp
 export const SearchBar = forwardRef(({searchValue}, myRef) => {
-    console.log('ref', myRef);
+    // console.log('ref', myRef);
   // const [search, setSearch] = useState('');
   const inputRef = useRef(null);
   const buttonRef = useRef(null)
-  console.log('inputRef', inputRef);
-  console.log("rerendering");
+  // console.log('inputRef', inputRef);
+  // console.log("rerendering");
   const printSearch = () => {
     // logic to access input field and read the value
     // const inputEl = document.getElementById("search");
