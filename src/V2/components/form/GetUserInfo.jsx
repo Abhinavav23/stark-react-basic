@@ -33,12 +33,17 @@ export const GetUSerInfo = () => {
     // we want to make POST call
     // pass a second argument to fetch
 
+    const token = 'absjsdjnsjdfvnjsdnvjsndjvnjsv:fvsndf';
+    const project_id = 'absjsdjnsjdfvnjsdnvjsndjvnjsv:fvsndf';
+
     const url = "https://jsonplaceholder.typicode.com/users";
     // required if you want to make a call other than GET
     const options = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`,
+        "projectId": project_id
       },
       body: JSON.stringify(userInfo),
     };
