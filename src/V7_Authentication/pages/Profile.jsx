@@ -1,11 +1,19 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useAuth } from '../providers/AuthProvider';
+import { useNavigate } from 'react-router-dom';
 // import { AuthContext } from '../providers/AuthProvider';
 
 export const Profile = () => {
     // const {user} = useContext(AuthContext);
     const { user } = useAuth();
+    const navigate = useNavigate();
     console.log('user', user);
+    // useEffect(() => {
+    //     if(!user.username){
+    //         navigate('/login');
+    //     }
+    // }, []);
+    // console.log('rendering profile');
   return (
    <section>
         <h3>Profile</h3>

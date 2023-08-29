@@ -47,6 +47,8 @@ export const Login = () => {
     // if no --> not a valid user --> validation error
   };
 
+  console.log('rendering login');
+  
   return (
     <>
       <form className="login-form" onSubmit={submitForm}>
@@ -65,6 +67,9 @@ export const Login = () => {
         <br />
         <input type="submit" value="Login" />
       </form>
+      <br />
+      <div>Don't have an account? please signup first</div>
+      <button onClick={() => navigate('/signup')}>signup</button>
       {error && <div style={{ color: "red" }}>{error}</div>}
     </>
   );
