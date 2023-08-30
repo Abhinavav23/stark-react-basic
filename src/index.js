@@ -8,13 +8,14 @@ import { BrowserRouter as Router } from "react-router-dom";
 // import { AppV2 } from "./V4/AppV2";
 // import { App } from "./V5Routing/App";
 // import { App } from "./V6/App";
-import { App } from "./V7_Authentication/App";
+// import { App } from "./V7_Authentication/App";
+import { App } from "./V8_Optimisation/App";
 
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(<App />);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <Router>
-    <App />
-  </Router>
-);
+// ReactDOM.createRoot(document.getElementById("root")).render(
+//   <Router>
+//     <App />
+//   </Router>
+// );
