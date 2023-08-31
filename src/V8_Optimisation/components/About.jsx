@@ -1,6 +1,6 @@
 import React, { memo, useRef } from "react";
 
-export const About = memo(({ contact }) => {
+export const About = memo(({ contact, decrementCount }) => {
   console.log("rendering About");
   const messageRef = useRef();
 
@@ -8,6 +8,7 @@ export const About = memo(({ contact }) => {
     const { value } = messageRef.current;
     contact(value);
   };
+
   return (
     <section style={{ border: "1px solid #ddd", padding: "1rem" }}>
       <h3>About</h3>
@@ -15,10 +16,11 @@ export const About = memo(({ contact }) => {
       <br />
       <input type="text" id="messgae" ref={messageRef} />
       <button onClick={handleClick}>contact</button>
+      <br />
+      <button onClick={decrementCount}>-</button>
     </section>
   );
 });
-
 
 // const a = () => {
 //     return 10

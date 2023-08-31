@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Product } from "./Product";
 
 import { memo } from "react";
 
@@ -15,7 +14,6 @@ const Home = (props) => {
       <button onClick={() => setLogin(!login)}>
         {login ? "logout" : "login"}
       </button>
-      <Product />
     </section>
   );
 };
@@ -27,6 +25,12 @@ export default memo(Home);
 // comparing the props passed previously and currently
 // if there is no change then it will not rerender the comp
 
+// memo
+// takes comp as argument
+// returns a memoized version of that comp
+
+
+
 
 // function Home(){
 //     return 'Home'
@@ -35,3 +39,13 @@ export default memo(Home);
 
 // Home();
 // Home();
+
+// function multiply(a,b){
+//     return a*b
+// }
+
+// function TenMultiply(x){
+//     return multiply(10,x)
+// }
+
+// TenMultiply();

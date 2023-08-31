@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { memo } from 'react'
 
-export const Product = () => {
+export const Product = memo(({info}) => {
     console.log('rendering product');
   return (
-    <div>Product</div>
+    <>
+        <h3>Product</h3>
+        <div>name: {info.name}</div>
+        <div>price: {info.price}</div>
+    </>
   )
-}
+})
