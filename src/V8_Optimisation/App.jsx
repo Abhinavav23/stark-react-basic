@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import { About } from "./components/About";
 import { Product } from "./components/Product";
 import { StateBatching } from "./components/StateBatching";
+import { ReactInternals } from "./ReactInternals";
 
 export const App = () => {
   const [counter, setCounter] = useState(10);
@@ -21,8 +22,8 @@ export const App = () => {
 
   //   decressing from 0
   const decrement = useCallback(() => {
-    console.log("calling decrement");
-    console.log("counter", counter);
+    // console.log("calling decrement");
+    // console.log("counter", counter);
     setCounter(counter - 1);
   }, [counter]);
 
@@ -31,8 +32,8 @@ export const App = () => {
   //   2nd arg could be dep array which will recalculate the value on changing the var
   //   returns the memoized value if nothing changes in dep array
   const userInfo = useMemo(() => {
-    console.log("calling use memo");
-    console.log("counter", counter);
+    // console.log("calling use memo");
+    // console.log("counter", counter);
     // loop that runs 10000 times
     // complex calculation which can take time --> 10 sec
     return { name: "Mobile", price: counter * 1000 };
@@ -40,18 +41,20 @@ export const App = () => {
 
   return (
     <>
-      <section>
+      {/* <section>
         <h2>App</h2>
         <p>count: {counter}</p>
         <button onClick={() => setCounter(counter + 1)}>+</button>
         <button onClick={() => setUserName("New user")}>update username</button>
-      </section>
+      </section> */}
       <br />
       <main style={{ display: "flex", gap: "2rem" }}>
         {/* <Home username={username} /> */}
         {/* <About contact={contactUs} decrementCount={decrement} /> */}
         {/* <Product info={userInfo} /> */}
-        <StateBatching/>
+        {/* <StateBatching/> */}
+        <ReactInternals/>
+        <section>section 2</section>
       </main>
     </>
   );
